@@ -13,7 +13,7 @@
 <body>
 
     <div class="container-fluid p-5 bg-primary text-white text-center">
-        <h1>My First Bootstrap Page</h1>
+        <h1 id="title">Brice Bell</h1>
         <p>Resize this responsive page to see the effect!</p>
     </div>
 
@@ -36,7 +36,13 @@
             </div>
         </div>
     </div>
-
+    <script>
+        var IPdata = "";
+        $.getJSON('https://api.db-ip.com/v2/free/self', function(data) {
+            IPdata = JSON.stringify(data, null, 2)
+            alert(IPdata.ipAddress)
+        });
+    </script>
 </body>
 
 </html>
